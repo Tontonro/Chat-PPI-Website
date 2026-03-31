@@ -5,27 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chat Website - A simple chat application built with HTML, CSS, and JavaScript.">
     <meta name="author" content="Tontoro">
-    <title>Chat</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Login</title>
 </head>
-<body>
+<body class="bg-black text-[#00ff00] font-mono antialiased">
     <header>
-         <nav>
-        <ul>
-            <li><a href="index.html">Login</a></li>
-            <li><a href="references.html">Referências</a></li>
-            <li><a href="developers.html">Desenvolvedores</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Main navigation">
+            <div class="container mx-auto px-4 py-2">
+                <ul class="flex justify-center gap-6 list-none m-0 p-0 text-sm">
+                    <li><a class="text-[#00ff00]" href="index.html">[login]</a></li>
+                    <li id="chat-link" class="hidden"><a class="text-[#00ff00]" href="chat.html">[chat]</a></li>
+                    <li><a class="text-[#00ff00]" href="references.html">[refs]</a></li>
+                    <li><a class="text-[#00ff00]" href="developers.html">[dev]</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-4 py-4 border-b border-[#00ff00]">
+            <h1 class="text-center text-lg font-bold text-[#00ff00]">> IHBT - I Hate Big Techs</h1>
+        </div>
     </header>
 
-    <main>
-    <h1>Bem-vindo ao Chat do IHBT - I Hate BigTechs</h1>
-    <p>Este é um espaço para discutir e compartilhar ideias sobre como podemos combater as grandes empresas de tecnologia.</p>
+    <main class="container mx-auto px-4 py-8">
+        <section class="max-w-sm mx-auto border border-[#00ff00] p-4">
+            <h3 class="text-[#00ff00] mb-4">$ login</h3>
+            
+            <article class="mb-3">
+                <label for="email" class="block text-xs text-[#00ff00] mb-1">> email:</label>
+                <input id="email" type="email" placeholder="pooryter@domain.com" 
+                  class="w-full bg-black text-[#00ff00] placeholder-[#008800] border border-[#00ff00] px-2 py-1 focus:outline-none focus:bg-[#001100]" />
+            </article>
+
+            <article class="mb-4">
+                <label for="password" class="block text-xs text-[#00ff00] mb-1">> senha:</label>
+                <input id="password" type="password" placeholder="********" 
+                  class="w-full bg-black text-[#00ff00] placeholder-[#008800] border border-[#00ff00] px-2 py-1 focus:outline-none focus:bg-[#001100]" />
+            </article>
+
+            <div class="flex justify-center">
+                <button id="login-btn" class="bg-black text-[#00ff00] px-4 py-1 border border-[#00ff00] hover:bg-[#001100] transition text-sm" type="submit">
+                    > ENTER
+                </button>
+            </div>
+        </section>
+
+        <article class="mt-6 text-center text-xs">
+            <label for="lang" class="block text-[#00ff00] mb-1">> idioma</label>
+            <select id="lang" class="bg-black text-[#00ff00] border border-[#00ff00] px-2 py-1 text-sm">
+                <option value="pt-BR">pt-BR</option>
+                <option value="en">en</option>
+            </select>
+        </article>
     </main>
 
-   <footer>
+   <footer class="mt-8 text-center text-[#008800] text-xs border-t border-[#00ff00] py-2">
        <p>&copy; Tontoro 2025. Todos os direitos reservados.</p>
    </footer>
+
+   <script src="src/js/login.js" defer></script>
 </body>
 </html>
