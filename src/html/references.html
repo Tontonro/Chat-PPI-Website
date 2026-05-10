@@ -1,28 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IHBT · Referências</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    * { box-sizing: border-box; }
+    body { font-family: 'Share Tech Mono', monospace; }
+
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
 </head>
-<body>
-       <header>
-         <nav>
-        <ul>
-            <li><a href="index.html">Login</a></li>
-            <li><a href="references.html">Referências</a></li>
-            <li><a href="developers.html">Desenvolvedores</a></li>
-        </ul>
+<body class="bg-black text-[#00ff00] min-h-screen flex flex-col">
+
+  <!-- ░░ HEADER ░░ -->
+  <header class="border-b border-[#003300]">
+    <nav class="container mx-auto px-4 py-2">
+      <ul class="flex justify-center gap-6 list-none m-0 p-0 text-xs">
+        <li><a class="text-[#00ff00] hover:text-white transition" href="index.html">[login]</a></li>
+        <li id="chat-link" class="hidden"><a class="text-[#00ff00] hover:text-white transition" href="chat.html">[chat]</a></li>
+        <li><a class="text-[#00ff00] hover:text-white transition" href="references.html">[refs]</a></li>
+        <li><a class="text-[#00ff00] hover:text-white transition" href="developers.html">[dev]</a></li>
+        <li id="logout-link" class="hidden"><a id="nav-logout" class="text-[#ff4444] hover:text-white transition cursor-pointer">[sair]</a></li>
+      </ul>
     </nav>
-    </header>
+    <div class="container mx-auto px-4 py-4">
+      <h1 class="text-center text-xl font-bold tracking-widest">> IHBT — I Hate Big Techs<span class="blink">_</span></h1>
+      <p class="text-center text-[#005500] text-xs mt-1">// sistema de chat seguro · versão 1.0</p>
+    </div>
+  </header>
 
-    <main>
-    <h1>Bem-vindo ao Chat do IHBT - I Hate BigTechs</h1>
-    <p>Este é um espaço para discutir e compartilhar ideias sobre como podemos combater as grandes empresas de tecnologia.</p>
-    </main>
+  <!-- ░░ MAIN ░░ -->
+  <main class="flex-1 container mx-auto px-4 py-10 max-w-3xl">
 
-   <footer>
-       <p>&copy; Tontoro 2025. Todos os direitos reservados.</p>
-   </footer>
+    <div class="mb-8 text-center">
+      <h2 class="text-lg text-[#00cc00] mb-1">$ cat ./references.txt</h2>
+      <p class="text-[#005500] text-xs">// tecnologias e recursos utilizados no projeto</p>
+    </div>
+
+    <!-- Tecnologias -->
+    <div class="section-block mb-8">
+      <h3 class="text-sm text-[#00aa00] border-b border-[#003300] pb-1 mb-4">// 01 · tecnologias front-end</h3>
+      <div class="space-y-2">
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">HTML5</p>
+            <p class="text-xs text-[#005500]">linguagem de marcação semântica para estrutura das páginas</p>
+          </div>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[mdn →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">CSS3</p>
+            <p class="text-xs text-[#005500]">estilização, animações e layout responsivo</p>
+          </div>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[mdn →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">JavaScript (ES2022+)</p>
+            <p class="text-xs text-[#005500]">lógica de autenticação, DOM manipulation e estado do chat</p>
+          </div>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[mdn →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">Tailwind CSS v3</p>
+            <p class="text-xs text-[#005500]">framework utility-first para estilização via classes</p>
+          </div>
+          <a href="https://tailwindcss.com/docs" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[docs →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">sessionStorage API</p>
+            <p class="text-xs text-[#005500]">armazenamento de sessão do usuário autenticado no browser</p>
+          </div>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[mdn →]</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fontes -->
+    <div class="section-block mb-8">
+      <h3 class="text-sm text-[#00aa00] border-b border-[#003300] pb-1 mb-4">// 02 · tipografia e assets</h3>
+      <div class="space-y-2">
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">Share Tech Mono</p>
+            <p class="text-xs text-[#005500]">fonte monoespaçada com visual de terminal · Google Fonts</p>
+          </div>
+          <a href="https://fonts.google.com/specimen/Share+Tech+Mono" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[fonts →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">IFRN Identidade Visual</p>
+            <p class="text-xs text-[#005500]">logomarca oficial do IFRN Campus Santa Cruz</p>
+          </div>
+          <a href="https://www.ifrn.edu.br" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[ifrn.edu.br →]</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Referências de aprendizado -->
+    <div class="section-block mb-4">
+      <h3 class="text-sm text-[#00aa00] border-b border-[#003300] pb-1 mb-4">// 03 · referências de aprendizado</h3>
+      <div class="space-y-2">
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">MDN Web Docs</p>
+            <p class="text-xs text-[#005500]">documentação de referência para HTML, CSS e JavaScript</p>
+          </div>
+          <a href="https://developer.mozilla.org/pt-BR" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[visitar →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">Tailwind CSS Docs</p>
+            <p class="text-xs text-[#005500]">documentação oficial do framework Tailwind CSS</p>
+          </div>
+          <a href="https://tailwindcss.com/docs" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[visitar →]</a>
+        </div>
+
+        <div class="ref-item border border-[#003300] bg-[#020802] px-4 py-3 flex justify-between items-center transition-all">
+          <div>
+            <p class="text-sm text-[#00ff00]">W3Schools</p>
+            <p class="text-xs text-[#005500]">tutoriais e exemplos de tecnologias web</p>
+          </div>
+          <a href="https://www.w3schools.com" target="_blank" class="text-[10px] text-[#004400] hover:text-[#00ff00]">[visitar →]</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-[#003300] py-6 text-[#005500] text-xs">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/Logo do IFRN.svg" alt="IFRN Campus Santa Cruz" class="h-10 opacity-70" />
+        <span>IFRN — Campus Santa Cruz</span>
+      </div>
+      <div class="text-center">
+        <p>Trabalho de Programação para Internet</p>
+        <p class="text-[#004400]">Prof. Marcelo Figueiredo Barbosa Júnior</p>
+      </div>
+      <div class="text-right text-[#003300]">
+        <a href="developers.html" class="hover:text-[#005500]">Ver desenvolvedores →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/auth.js"></script>
+  <script>
+    updateNav();
+    document.getElementById("nav-logout")?.addEventListener("click", () => { logout(); window.location.href = "index.html"; });
+  </script>
 </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IHBT · Chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    * { box-sizing: border-box; }
+    body { font-family: 'Share Tech Mono', monospace; }
+
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+  </style>
+</head>
+<body class="bg-black text-[#00ff00] min-h-screen flex flex-col">
+
+  <header class="border-b border-[#003300] flex-shrink-0">
+    <nav class="container mx-auto px-4 py-2">
+      <ul class="flex justify-center gap-6 list-none m-0 p-0 text-xs">
+        <li><a class="text-[#00ff00] hover:text-white transition" href="index.html">[login]</a></li>
+        <li id="chat-link" class="hidden"><a class="text-[#00ff00] hover:text-white transition" href="chat.html">[chat]</a></li>
+        <li><a class="text-[#00ff00] hover:text-white transition" href="references.html">[refs]</a></li>
+        <li><a class="text-[#00ff00] hover:text-white transition" href="developers.html">[dev]</a></li>
+        <li id="logout-link"><a id="logout-btn" class="text-[#ff4444] hover:text-white transition cursor-pointer">[sair]</a></li>
+      </ul>
+    </nav>
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <h1 class="text-lg font-bold tracking-widest">> IHBT<span class="blink">_</span></h1>
+      <span class="text-[#005500] text-xs">logado como: <span id="session-user" class="text-[#00aa00]"></span></span>
+    </div>
+  </header>
+
+  <div class="flex flex-1 overflow-hidden" style="height: calc(100vh - 110px);">
+
+    <aside class="w-48 border-r border-[#003300] flex flex-col bg-[#020802] flex-shrink-0">
+      <div class="text-[#005500] text-xs px-3 py-2 border-b border-[#002200]">// canais</div>
+
+      <div class="flex flex-col gap-1 py-2 px-1">
+        <button data-chat="sala-geral"
+          class="chat-item text-left text-xs text-[#008800] px-3 py-2 border-l-2 border-transparent
+                 hover:bg-[#001800] hover:text-[#00ff00] transition-all">
+          # sala-geral
+        </button>
+        <button data-chat="cafe-digital"
+          class="chat-item text-left text-xs text-[#008800] px-3 py-2 border-l-2 border-transparent
+                 hover:bg-[#001800] hover:text-[#00ff00] transition-all">
+          # café-digital
+        </button>
+      </div>
+
+      <div class="mt-auto px-3 py-2 border-t border-[#002200] text-[10px] text-[#003300]">
+        v1.0 · front-end only
+      </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+
+      <div class="px-4 py-2 border-b border-[#003300] flex-shrink-0">
+        <h2 id="chat-title" class="text-sm font-bold text-[#00ff00]">// selecione um canal</h2>
+        <p id="chat-desc" class="text-[10px] text-[#005500]">← clique em um canal na barra lateral</p>
+      </div>
+
+      <div id="messages-box" class="flex-1 overflow-y-auto px-4 py-4">
+
+        <div id="chat-placeholder" class="flex flex-col items-center justify-center h-full text-[#003300] text-xs">
+      <img class="h-14 w-14 p-3" src="assets/img/Union.svg" alt="Emoji de mensagem">
+          <p>nenhum canal selecionado</p>
+          <p class="mt-1">← escolha um canal para começar</p>
+        </div>
+
+      </div>
+
+      <div id="chat-input-area" class="hidden border-t border-[#003300] px-4 py-3 flex-shrink-0">
+        <div class="flex gap-2 items-end">
+          <div class="flex-1 border border-[#003300] bg-[#020802] focus-within:border-[#00ff00] transition">
+            <textarea id="msg-input" rows="1"
+              placeholder="> escreva uma mensagem..."
+              class="w-full bg-transparent text-[#00ff00] placeholder-[#004400] px-3 py-2 text-sm leading-snug">
+            </textarea>
+          </div>
+          <button id="send-btn"
+            class="bg-black text-[#00ff00] border border-[#00ff00] px-4 py-2 text-xs
+                   hover:bg-[#001100] hover:shadow-[0_0_8px_#00ff00] transition-all whitespace-nowrap">
+            > enviar
+          </button>
+        </div>
+        <p class="text-[10px] text-[#003300] mt-1">Enter para enviar · Shift+Enter para nova linha</p>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="border-t border-[#003300] py-4 text-[#005500] text-xs flex-shrink-0">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/Logo do IFRN.svg" alt="IFRN Campus Santa Cruz" class="h-8 opacity-60" />
+        <span>IFRN — Campus Santa Cruz</span>
+      </div>
+      <div class="text-center">
+        <p>Trabalho de Programação para Internet</p>
+        <p class="text-[#004400]">Prof. Marcelo Figueiredo Barbosa Júnior</p>
+      </div>
+      <div class="text-right text-[#003300]">
+        <a href="references.html" class="hover:text-[#005500]">Tailwind CSS</a> ·
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/auth.js"></script>
+  <script src="src/js/chat.js"></script>
+</body>
+</html>
