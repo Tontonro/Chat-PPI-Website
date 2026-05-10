@@ -13,7 +13,11 @@
     .blink { animation: blink 1s step-end infinite; }
     @keyframes blink { 50% { opacity: 0; } }
 
-  </style>
+    .active-chat {
+      background-color: #001800;
+      color: #00ff00 !important;
+      border-left-color: #00ff00 !important;
+    }</style>
 </head>
 <body class="bg-black text-[#00ff00] min-h-screen flex flex-col">
 
@@ -66,7 +70,7 @@
       <div id="messages-box" class="flex-1 overflow-y-auto px-4 py-4">
 
         <div id="chat-placeholder" class="flex flex-col items-center justify-center h-full text-[#003300] text-xs">
-      <img class="h-14 w-14 p-3" src="assets/img/Union.svg" alt="Emoji de mensagem">
+      <img class="h-14 w-14 p-3" src="assets/img/Emoji.svg" alt="Emoji de mensagem">
           <p>nenhum canal selecionado</p>
           <p class="mt-1">← escolha um canal para começar</p>
         </div>
@@ -96,7 +100,7 @@
   <footer class="border-t border-[#003300] py-4 text-[#005500] text-xs flex-shrink-0">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
       <div class="flex items-center gap-3">
-        <img src="assets/img/Logo do IFRN.svg" alt="IFRN Campus Santa Cruz" class="h-8 opacity-60" />
+        <img src="assets/img/LogoIFRN.svg" alt="IFRN Campus Santa Cruz" class="h-8 opacity-60" />
         <span>IFRN — Campus Santa Cruz</span>
       </div>
       <div class="text-center">

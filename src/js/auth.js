@@ -1,6 +1,10 @@
 const USERS = [
   { username: "mimmarcelo", password: "Teste123" },
-];
+  { username: "Udibone", password: "Antonny1" },
+  { username: "Tontoro", password: "Bento2" },
+  { username: "Nyx", password: "Gervásio3" },
+  { username: "root", password: "root" }
+]
 
 const SESSION_KEY = "ihbt_user";
 

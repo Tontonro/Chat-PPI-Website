@@ -20,11 +20,11 @@
   <header class="border-b border-[#003300]">
     <nav class="container mx-auto px-4 py-2">
       <ul class="flex justify-center gap-6 list-none m-0 p-0 text-xs">
-        <li><a class="text-[#00ff00] hover:text-white transition" href="index.html">[login]</a></li>
-        <li id="chat-link" class="hidden"><a class="text-[#00ff00] hover:text-white transition" href="chat.html">[chat]</a></li>
-        <li><a class="text-[#00ff00] hover:text-white transition" href="references.html">[refs]</a></li>
-        <li><a class="text-[#00ff00] hover:text-white transition" href="developers.html">[dev]</a></li>
-        <li id="logout-link" class="hidden"><a id="nav-logout" class="text-[#ff4444] hover:text-white transition cursor-pointer">[sair]</a></li>
+        <li><a class="text-[#00aa00] hover:text-white transition" href="index.html">[login]</a></li>
+        <li id="chat-link" class="hidden"><a class="text-[#00aa00] hover:text-white transition" href="chat.html">[chat]</a></li>
+        <li><a class="text-[#00aa00] hover:text-white transition" href="references.html">[refs]</a></li>
+        <li><a class="text-[#00aa00] hover:text-white transition" href="developers.html">[dev]</a></li>
+        <li id="logout-link" class="hidden"><a id="nav-logout" class="text-[#00aa00] hover:text-white transition cursor-pointer">[sair]</a></li>
       </ul>
     </nav>
     <div class="container mx-auto px-4 py-4">
@@ -33,53 +33,40 @@
     </div>
   </header>
 
-  <!-- ░░ MAIN ░░ -->
   <main class="flex-1 container mx-auto px-4 py-10">
     <div class="mb-8 text-center">
       <h2 class="text-lg text-[#00cc00] mb-1">$ ls ./desenvolvedores</h2>
       <p class="text-[#005500] text-xs">// equipe responsável pelo projeto</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
 
-      <!-- Dev 1 -->
       <div class="card border border-[#003300] bg-[#020802] p-5 transition-all">
         <div class="text-2xl mb-3">👾</div>
-        <p class="text-[#00ff00] text-sm font-bold mb-1">Tontoro</p>
+        <p class="text-sm font-bold mb-1"><a href="https://github.com/Udibone69" target="_blank" rel="noopener noreferrer" class="text-[#008800] hover:text-[#ff9900] transition">Udibone</a></p>
         <p class="text-[#008800] text-xs mb-3">Frontend · UI/UX</p>
         <div class="text-[10px] text-[#005500] space-y-1">
           <p>> HTML · CSS · JS</p>
-          <p>> Tailwind CSS</p>
         </div>
       </div>
 
       <div class="card border border-[#003300] bg-[#020802] p-5 transition-all">
         <div class="text-2xl mb-3">🛠️</div>
-        <p class="text-[#00ff00] text-sm font-bold mb-1">Dev Alpha</p>
+        <p class="text-sm font-bold mb-1"><a href="https://github.com/Nyxkaka" target="_blank" rel="noopener noreferrer" class="text-[#008800] hover:text-[#9933ff] transition">Nyx</a></p>
         <p class="text-[#008800] text-xs mb-3">Lógica · Auth</p>
         <div class="text-[10px] text-[#005500] space-y-1">
           <p>> JavaScript</p>
-          <p>> sessionStorage</p>
         </div>
       </div>
 
       <div class="card border border-[#003300] bg-[#020802] p-5 transition-all">
         <div class="text-2xl mb-3">🖥️</div>
-        <p class="text-[#00ff00] text-sm font-bold mb-1">Dev Beta</p>
+        <p class="text-sm font-bold mb-1"><a href="https://github.com/Tontonro" target="_blank" rel="noopener noreferrer" class="text-[#008800] hover:text-[#3366ff] transition">Tontoro</a></p>
         <p class="text-[#008800] text-xs mb-3">Design · Estilo</p>
         <div class="text-[10px] text-[#005500] space-y-1">
           <p>> CSS Animations</p>
+          <p>> Tailwind CSS</p>
           <p>> Google Fonts</p>
-        </div>
-      </div>
-
-      <div class="card border border-[#003300] bg-[#020802] p-5 transition-all">
-        <div class="text-2xl mb-3">📡</div>
-        <p class="text-[#00ff00] text-sm font-bold mb-1">Dev Gamma</p>
-        <p class="text-[#008800] text-xs mb-3">Estrutura · Docs</p>
-        <div class="text-[10px] text-[#005500] space-y-1">
-          <p>> HTML semântico</p>
-          <p>> GitHub Pages</p>
         </div>
       </div>
 
@@ -93,7 +80,7 @@
   <footer class="border-t border-[#003300] py-6 text-[#005500] text-xs">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <img src="assets/img/Logo do IFRN.svg" alt="IFRN Campus Santa Cruz" class="h-10 opacity-70" />
+        <img src="assets/img/LogoIFRN.svg" alt="IFRN Campus Santa Cruz" class="h-10 opacity-70" />
         <span>IFRN — Campus Santa Cruz</span>
       </div>
       <div class="text-center">
@@ -101,7 +88,7 @@
         <p class="text-[#004400]">Prof. Marcelo Figueiredo Barbosa Júnior</p>
       </div>
       <div class="text-right text-[#003300]">
-        <a href="references.html" class="hover:text-[#005500]">Ver referências →</a>
+        <a href="references.html" class="text-[#3366ff] hover:text-[#6699ff]">Ver referências →</a>
       </div>
     </div>
   </footer>
