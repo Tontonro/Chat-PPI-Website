@@ -5,25 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IHBT · Referências</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-    * { box-sizing: border-box; }
-    body { font-family: 'Share Tech Mono', monospace; }
-
-    .blink { animation: blink 1s step-end infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-  </style>
+  <link rel="stylesheet" href="assets/css/global.css" />
 </head>
 <body class="bg-black text-[#00ff00] min-h-screen flex flex-col">
 
   <!-- ░░ HEADER ░░ -->
   <header class="border-b border-[#003300]">
+    <div class="container mx-auto px-4 py-4 flex justify-center">
+      <a href="index.html" aria-label="IHBT Home" class="logo-bug">
+        <img src="assets/img/Logo.svg" alt="IHBT Logo" class="h-14 select-none" />
+      </a>
+    </div>
     <nav class="container mx-auto px-4 py-2">
       <ul class="flex justify-center gap-6 list-none m-0 p-0 text-xs">
         <li><a class="text-[#00ff00] hover:text-white transition" href="index.html">[login]</a></li>
         <li id="chat-link" class="hidden"><a class="text-[#00ff00] hover:text-white transition" href="chat.html">[chat]</a></li>
-        <li><a class="text-[#00ff00] hover:text-white transition" href="references.html">[refs]</a></li>
-        <li><a class="text-[#00ff00] hover:text-white transition" href="developers.html">[dev]</a></li>
+        <li><a class="text-[#00ff00] hover:text-white transition" href="ref.html">[refs]</a></li>
+        <li><a class="text-[#00ff00] hover:text-white transition" href="dev.html">[dev]</a></li>
         <li id="logout-link" class="hidden"><a id="nav-logout" class="text-[#ff4444] hover:text-white transition cursor-pointer">[sair]</a></li>
       </ul>
     </nav>
@@ -158,7 +156,7 @@
         <p class="text-[#004400]">Prof. Marcelo Figueiredo Barbosa Júnior</p>
       </div>
       <div class="text-right text-[#003300]">
-        <a href="developers.html" class="hover:text-[#005500]">Ver desenvolvedores →</a>
+        <a href="dev.html" class="hover:text-[#005500]">Ver desenvolvedores →</a>
       </div>
     </div>
   </footer>
@@ -166,7 +164,7 @@
   <script src="src/js/auth.js"></script>
   <script>
     updateNav();
-    document.getElementById("nav-logout")?.addEventListener("click", () => { logout(); window.location.href = "index.html"; });
+    document.getElementById("logout-link")?.querySelector("a")?.addEventListener("click", () => { logout(); window.location.href = "index.html"; });
   </script>
 </body>
 </html>

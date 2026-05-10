@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* { box-sizing: border-box; }
+body { font-family: 'Share Tech Mono', monospace; }
+
+.blink { animation: blink 1s step-end infinite; }
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.logo-bug {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-bug img {
+  position: relative;
+  z-index: 3;
+  animation: logo-glitch-main 2.6s steps(1, end) infinite;
+}
+
+.logo-bug::before,
+.logo-bug::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../img/Logo.svg') center/contain no-repeat;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.logo-bug::before {
+  z-index: 1;
+  filter: drop-shadow(-2px 0 #00ffee);
+  animation: logo-glitch-cyan 2.6s steps(1, end) infinite;
+}
+
+.logo-bug::after {
+  z-index: 2;
+  filter: drop-shadow(2px 0 #ff003c);
+  animation: logo-glitch-red 2.6s steps(1, end) infinite;
+}
+
+@keyframes logo-glitch-main {
+  0%, 83%, 100% { transform: translate(0, 0); }
+  84% { transform: translate(-1px, 1px); }
+  86% { transform: translate(1px, -1px); }
+  88% { transform: translate(-2px, 0); }
+  90% { transform: translate(2px, 1px); }
+  92% { transform: translate(0, -1px); }
+}
+
+@keyframes logo-glitch-cyan {
+  0%, 82%, 100% { opacity: 0; transform: translate(0, 0); }
+  84%, 90% { opacity: 0.55; transform: translate(-3px, 0); }
+  86% { opacity: 0.35; transform: translate(-1px, 1px); }
+}
+
+@keyframes logo-glitch-red {
+  0%, 82%, 100% { opacity: 0; transform: translate(0, 0); }
+  85%, 91% { opacity: 0.5; transform: translate(3px, 0); }
+  88% { opacity: 0.3; transform: translate(1px, -1px); }
+}
