@@ -35,8 +35,8 @@ Use um dos seguintes usuários para testar:
 | Usuário      | Senha       |
 |--------------|-------------|
 | `mimmarcelo` | `Teste123`  |
-| `Udibone`    | `Antonny1`  |
-| `Tontoro`    | `Bento2`    |
+| `Tontonro`    | `Antonny1`  |
+| `Udibone`    | `Bento2`    |
 | `Nyx`        | `Gervásio3` |
 | `root`       | `root`      |
 
