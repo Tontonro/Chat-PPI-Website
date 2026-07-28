@@ -44,30 +44,6 @@ Use um dos seguintes usuários para testar:
 
 ---
 
-## Estrutura do Projeto
-
-
-IHBT-Chat/
-├── assets/
-│   ├── css/
-│   │   └── global.css          # Estilos complementares
-│   ├── img/
-│   │   ├── Logo.svg            # Logomarca IHBT
-│   │   └── LogoIFRN.svg        # Logotipo do IFRN
-├── src/
-│   └── js/
-│       ├── auth.js             # Lista de usuários e controle de sessão
-│       ├── login.js            # Lógica da página de login
-│       └── chat.js             # Lógica do chat (salas, mensagens, envio)
-├── index.html                  # Página de login
-├── chat.html                   # Área principal do chat
-├── dev.html                    # Página dos desenvolvedores
-├── ref.html                    # Página de referências/tecnologias
-├── LICENSE                     # Licença MIT
-└── README.md                   # Este arquivo
-
----
-
 ## Como Executar
 
 1. Clone o repositório:
